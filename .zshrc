@@ -83,16 +83,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=/usr/local/bin:$PATH:$HOME/google-cloud-sdk/bin/
+export PATH=/usr/local/bin:$PATH:$HOME/google-cloud-sdk/bin/:$HOME/scripts
 source $ZSH/oh-my-zsh.sh
 
 
 alias grow="/Users/carlosvilla/bin/grow"
 alias grow@0.0.67="/Users/carlosvilla/bin/grow-0.0.67"
+alias sq="/Users/carlosvilla/.nvm/versions/node/v6.10.2/bin/stage-queue"
 
 #alias for vim to use Macvim
 alias vim="mvim -v"
 alias vi="mvim -v"
+alias v="mvim -v"
 
 #NVM 
 export NVM_DIR="$HOME/.nvm"
