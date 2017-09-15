@@ -51,7 +51,7 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,6 +89,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias grow="/Users/carlosvilla/bin/grow"
 alias grow@0.0.67="/Users/carlosvilla/bin/grow-0.0.67"
+alias grow@0.1.3="/Users/carlosvilla/bin/grow-0.1.3"
 alias sq="/Users/carlosvilla/.nvm/versions/node/v6.10.2/bin/stage-queue"
 
 #alias for vim to use Macvim
@@ -100,4 +101,6 @@ alias v="mvim -v"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
+#Yarn
+export PATH=$PATH:/usr/local/Cellar/yarn/0.27.5_1/bin/
 

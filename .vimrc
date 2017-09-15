@@ -1,18 +1,35 @@
 syntax on
 
-colorscheme deep-space
+colorscheme codedark
+
+" default shel
 :set shell=/bin/zsh
+
+" set line numbers
 :set number
-:set expandtab
+
+" show existing tab with 2 spaces width
 :set tabstop=2
+
+" On pressing tab, insert 2 spaces
+:set expandtab
+
+" when indenting with '>', use 2 spaces width
 :set shiftwidth=2
+
 :set mouse=a
-":set runtimepath+=~/.vim/bundle/jshint2.vim/
 :set laststatus=2
-":set textwidth=80
+
+" max 80 chars per line
+:set textwidth=80 "set tw=80
+:set colorcolumn=80 "set cc=80
+
+
 :set directory=$HOME/.vim//
+
 :set incsearch
 :set ignorecase
+:set cursorline
 
 "Jshint2 Config
 let jshint2_read = 1
@@ -37,6 +54,9 @@ let g:syntastic_scss_checkers=["sass_lint"]
  Plugin 'heavenshell/vim-jsdoc'
  Plugin 'kien/ctrlp.vim'
  Plugin 'tpope/vim-fugitive'
+ Plugin 'nathanaelkane/vim-indent-guides'
+ Plugin 'tomasiser/vim-code-dark'
+
 
 "Plugin 'dracula/vim'
 
@@ -96,4 +116,7 @@ let g:syntastic_javascript_checkers = ['gjslint']
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
