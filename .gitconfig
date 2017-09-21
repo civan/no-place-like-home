@@ -1,17 +1,20 @@
 [http]
-	cookiefile = /Users/carlosvilla/.gitcookies
+  cookiefile = /Users/carlosvilla/.gitcookies
 [core]
-	editor = /usr/bin/vim
+  editor = /usr/bin/vim
 [user]
-	name = Carlos Mercado
-	email = carlosvilla@google.com
+  name = Carlos Mercado
+  email = carlosvilla@google.com
 [credential]
-	helper = cache
+  helper = cache
+[apply]
+  whitespace = warn
 
 [commit]
   template = ~/scripts/.commit-message-template
 
 [alias]
+  s = status
   pom = pull origin master
   ca = commit --amend
-  cr = !sh -c \"git push origin HEAD:refs/for/$1\" 
+  cr = !sh -c \"git push origin HEAD:refs/for/$1\"
