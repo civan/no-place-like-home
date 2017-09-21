@@ -120,3 +120,6 @@ let g:syntastic_check_on_wq = 0
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
+" macros
+let @l = 'Iconsole.log(A);'
+nmap <leader>l @l
