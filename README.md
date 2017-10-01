@@ -1,7 +1,8 @@
-** No place like $HOME setup
+# No place like $HOME setup
 
+This repo adds a git repo for home to share same config accross multiples machines.
 
-*** Instalation
+## Instalation
 
 1. Clone this repo, this is going to be your home
 
