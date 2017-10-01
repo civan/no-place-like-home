@@ -22,24 +22,16 @@ syntax on
 :set textwidth=80 "set tw=80
 :set colorcolumn=80 "set cc=80
 
-
 :set directory=$HOME/.vim//
 
 :set incsearch
 :set ignorecase
 :set cursorline
 
-"Jshint2 Config
-let jshint2_read = 1
-let jshint2_save = 1
-
-"sass-lint config
-let g:syntastic_sass_checkers=["sass_lint"]
-let g:syntastic_scss_checkers=["sass_lint"]
-
-"initiate Vundle
+" initiate Vundle
  let &runtimepath.=',$HOME/.vim/bundle/Vundle.vim'
  call vundle#begin()
+
  " let Vundle manage Vundle, required
  Plugin 'gmarik/Vundle.vim'
 
@@ -49,16 +41,10 @@ let g:syntastic_scss_checkers=["sass_lint"]
  Plugin 'gcorne/vim-sass-lint'
  Plugin 'Xuyuanp/nerdtree-git-plugin'
  Plugin 'Lokaltog/vim-powerline'
- Plugin 'heavenshell/vim-jsdoc'
  Plugin 'kien/ctrlp.vim'
  Plugin 'tpope/vim-fugitive'
  Plugin 'nathanaelkane/vim-indent-guides'
  Plugin 'tomasiser/vim-code-dark'
-
-
-"Plugin 'dracula/vim'
-
- " -- Web Development
  Plugin 'Shutnik/jshint2.vim'
 
  " end plugin definition
@@ -73,7 +59,7 @@ let g:syntastic_scss_checkers=["sass_lint"]
  autocmd VimEnter * wincmd p
 
  " To close vim if the only windows open is nerdTree
- autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " nerdtree -git Config
 let g:NERDTreeIndicatorMapCustom = {
@@ -118,6 +104,13 @@ let g:syntastic_javascript_checkers = ['gjslint']
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Jshint2 Config
+let jshint2_read = 1
+let jshint2_save = 1
+
+" sass-lint config
+let g:syntastic_scss_checkers=["sass_lint"]
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
