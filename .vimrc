@@ -2,7 +2,7 @@ syntax on
 
 colorscheme codedark
 
-" default shel
+" default shell
 :set shell=/bin/zsh
 
 " set line numbers
