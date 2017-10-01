@@ -3,9 +3,8 @@
 This repo adds a git repo for home to share same config accross multiples
 machines.
 
-Vundle Plugins:
+[Vundle](https://github.com/VundleVim/Vundle.vim) Plugins:
 
-* [Vundle](https://github.com/VundleVim/Vundle.vim) - for managing plugins
 * scrooloose/nerdtree
 * scrooloose/syntastic
 * gcorne/vim-sass-lint
