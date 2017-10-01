@@ -5,16 +5,17 @@ machines.
 
 [Vundle](https://github.com/VundleVim/Vundle.vim) Plugins:
 
-* scrooloose/nerdtree
-* scrooloose/syntastic
-* gcorne/vim-sass-lint
-* Xuyuanp/nerdtree-git-plugin
-* Lokaltog/vim-powerline
-* kien/ctrlp.vim
-* tpope/vim-fugitive
-* nathanaelkane/vim-indent-guides
-* tomasiser/vim-code-dark
-* Shutnik/jshint2.vim
+* [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
+* [scrooloose/syntastic](https://github.com/vim-syntastic/syntastic)
+* [lokaltog/vim-powerline](https://github.com/Lokaltog/vim-powerline)
+* [xuyuanp/nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
+* [kien/ctrlp.vim](https://github.com/kien/ctrlp.vim)
+* [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+* [nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
+* [tomasiser/vim-code-dark](https://github.com/tomasiser/vim-code-dark)
+* [shutnik/jshint2.vim](https://github.com/Shutnik/jshint2.vim)
+* [gcorne/vim-sass-lint](https://github.com/gcorne/vim-sass-lint)
+
 
 ## Installation
 
