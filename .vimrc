@@ -1,7 +1,5 @@
 syntax on
 
-colorscheme codedark
-
 " default shell
 :set shell=/bin/zsh
 
@@ -65,6 +63,10 @@ let g:syntastic_scss_checkers=["sass_lint"]
 
  " end plugin definition
  call vundle#end()            " required for vundle
+
+
+ " color scheme
+ colorscheme codedark
 
  " start NERDTree on start-up and focus active window
  autocmd VimEnter * NERDTree
