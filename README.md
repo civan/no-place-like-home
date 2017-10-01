@@ -3,19 +3,18 @@
 This repo adds a git repo for home to share same config accross multiples
 machines.
 
-Vundle Plugins:
+[Vundle](https://github.com/VundleVim/Vundle.vim) Plugins:
 
-* [Vundle](https://github.com/VundleVim/Vundle.vim) - for managing plugins
 * scrooloose/nerdtree
 * scrooloose/syntastic
 * gcorne/vim-sass-lint
 * Xuyuanp/nerdtree-git-plugin
 * Lokaltog/vim-powerline
-* heavenshell/vim-jsdoc
 * kien/ctrlp.vim
 * tpope/vim-fugitive
 * nathanaelkane/vim-indent-guides
 * tomasiser/vim-code-dark
+* Shutnik/jshint2.vim
 
 ## Installation
 
@@ -27,8 +26,13 @@ git remote add origin https://github.com/civan/no-place-like-home.git
 git fetch
 git reset origin/master
 ```
+2. Install Vundle
 
-2. Install plugins
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+3. Install plugins
 
 ```
 vim +PluginInstall +qall
