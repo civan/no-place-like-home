@@ -43,21 +43,20 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "start plugin definition
-Plugin 'lokaltog/vim-powerline'
-Plugin 'shutnik/jshint2.vim'
-Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'gcorne/vim-sass-lint'
 Plugin 'kien/ctrlp.vim'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'lokaltog/vim-powerline'
 Plugin 'majutsushi/tagbar'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'shutnik/jshint2.vim'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-
-
+Plugin 'valloric/youcompleteme'
+Plugin 'xuyuanp/nerdtree-git-plugin'
 
  " end plugin definition
  call vundle#end()   " required for vundle
