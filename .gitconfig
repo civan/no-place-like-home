@@ -3,8 +3,8 @@
 [core]
   editor = /usr/bin/vim
 [user]
-  name = Carlos Mercado
-  email = carlosvilla@google.com
+	name = Iván Mercado
+	email = c_ivanmercado@hotmail.com
 [credential]
   helper = cache
 [apply]
