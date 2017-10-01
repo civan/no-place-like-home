@@ -29,10 +29,10 @@ set directory=$HOME/.vim//
 set incsearch
 set ignorecase
 set cursorline
-set spell spelllang=en
+set spell spelllang=en_us
 set t_Co=256
 set term=xterm-256color
-
+set encoding=utf-8
 
 
 " initiate Vundle
@@ -43,12 +43,15 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "start plugin definition
+
+Plugin 'airblade/vim-gitgutter'
 Plugin 'gcorne/vim-sass-lint'
 Plugin 'kien/ctrlp.vim'
 Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'lokaltog/vim-powerline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'quramy/tsuquyomi'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'shutnik/jshint2.vim'
@@ -57,38 +60,43 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'valloric/youcompleteme'
 Plugin 'xuyuanp/nerdtree-git-plugin'
-
- " end plugin definition
- call vundle#end()   " required for vundle
+Plugin 'vim-airline/vim-airline-themes'
 
 
- " color scheme
- colorscheme codedark
+" end plugin definition
+call vundle#end()   " required for Vundle
 
- " start NERDTree on start-up and focus active window
- autocmd VimEnter * NERDTree
- autocmd VimEnter * wincmd p
 
- " To close vim if the only windows open is NERDTree
+" color scheme
+colorscheme codedark
+
+" Omni Complete
+set omnifunc=syntaxcomplete#Complete
+
+" start NERDTree on start-up and focus active window
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
+" To close vim if the only windows open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " NERDTree -git Config
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+  \ "Modified"  : "✹",
+  \ "Staged"    : "✚",
+  \ "Untracked" : "✭",
+  \ "Renamed"   : "➜",
+  \ "Unmerged"  : "═",
+  \ "Deleted"   : "✖",
+  \ "Dirty"     : "✗",
+  \ "Clean"     : "✔︎",
+  \ "Unknown"   : "?"
+  \ }
 
 " NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
 call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
@@ -104,9 +112,9 @@ call NERDTreeHighlightFile('js', 'red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'magenta', 'none', '#ff00ff', '#151515')
 
 
-" powerline config
-set encoding=utf-8
-" let g:Powerline_symbols = 'fancy'
+" Airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
 
 " suntastic config
 set statusline+=%#warningmsg#
@@ -148,32 +156,37 @@ autocmd BufWinLeave * call clearmatches()
 
 " Persistent Undo
 if !isdirectory($HOME."/.vim/undo-dir")
-    call mkdir($HOME."/.vim/undo-dir", "", 0700)
+  call mkdir($HOME."/.vim/undo-dir", "", 0700)
 endif
 
 set undodir=~/.vim/undo-dir
 set undofile
 
 " Rainbow Parentheses
-au VimEnter * RainbowParenthesesToggle
+au VimEnter * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
+  \ ['brown',       'RoyalBlue3'],
+  \ ['darkgray',    'DarkOrchid3'],
+  \ ['darkgreen',   'firebrick3'],
+  \ ['darkcyan',    'RoyalBlue3'],
+  \ ['darkred',     'SeaGreen3'],
+  \ ['darkmagenta', 'DarkOrchid3'],
+  \ ['brown',       'firebrick3'],
+  \ ['gray',        'RoyalBlue3'],
+  \ ['darkmagenta', 'DarkOrchid3'],
+  \ ['darkgreen',   'RoyalBlue3'],
+  \ ['darkcyan',    'SeaGreen3'],
+  \ ['darkred',     'DarkOrchid3'],
+  \ ['red',         'firebrick3'],
+  \ ]
+
+" tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
+autocmd FileType typescript setlocal completeopt+=menu,preview
 
 
 " MAPS
