@@ -1,92 +1,101 @@
 syntax on
 
-colorscheme codedark
-
-" default shel
-:set shell=/bin/zsh
+" default shell
+set shell=/bin/zsh
 
 " set line numbers
-:set number
+set number
 
 " show existing tab with 2 spaces width
-:set tabstop=2
+set tabstop=2
 
 " On pressing tab, insert 2 spaces
-:set expandtab
+set expandtab
 
 " when indenting with '>', use 2 spaces width
-:set shiftwidth=2
+set shiftwidth=2
 
-:set mouse=a
-:set laststatus=2
+" Enable mouse
+set mouse=a
+
+set laststatus=2
 
 " max 80 chars per line
-:set textwidth=80 "set tw=80
-:set colorcolumn=80 "set cc=80
+set textwidth=80 "set tw=80
+set colorcolumn=80 "set cc=80
+
+set directory=$HOME/.vim//
+
+set incsearch
+set ignorecase
+set cursorline
+set spell spelllang=en_us
+set t_Co=256
+set term=xterm-256color
+set encoding=utf-8
 
 
-:set directory=$HOME/.vim//
+" initiate Vundle
+let &runtimepath.=',$HOME/.vim/bundle/Vundle.vim'
+call vundle#begin()
 
-:set incsearch
-:set ignorecase
-:set cursorline
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-"Jshint2 Config
-let jshint2_read = 1
-let jshint2_save = 1
+"start plugin definition
 
-"sass-lint config
-let g:syntastic_sass_checkers=["sass_lint"]
-let g:syntastic_scss_checkers=["sass_lint"]
+Plugin 'airblade/vim-gitgutter'
+Plugin 'gcorne/vim-sass-lint'
+Plugin 'kien/ctrlp.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'majutsushi/tagbar'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'quramy/tsuquyomi'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'shutnik/jshint2.vim'
+Plugin 'tomasiser/vim-code-dark'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'valloric/youcompleteme'
+Plugin 'xuyuanp/nerdtree-git-plugin'
+Plugin 'vim-airline/vim-airline-themes'
 
-"initiate Vundle
- let &runtimepath.=',$HOME/.vim/bundle/Vundle.vim'
- call vundle#begin()
- " let Vundle manage Vundle, required
- Plugin 'gmarik/Vundle.vim'
+" end plugin definition
+call vundle#end()   " required for Vundle
 
- "start plugin defintion
- Plugin 'scrooloose/nerdtree'
- Plugin 'scrooloose/syntastic'
- Plugin 'gcorne/vim-sass-lint'
- Plugin 'Xuyuanp/nerdtree-git-plugin'
- Plugin 'Lokaltog/vim-powerline'
- Plugin 'heavenshell/vim-jsdoc'
- Plugin 'kien/ctrlp.vim'
- Plugin 'tpope/vim-fugitive'
- Plugin 'nathanaelkane/vim-indent-guides'
- Plugin 'tomasiser/vim-code-dark'
 
- " -- Web Development
- Plugin 'Shutnik/jshint2.vim'
+" color scheme
+colorscheme codedark
 
- " end plugin definition
- call vundle#end()            " required for vundle
+" Omni Complete
+set omnifunc=syntaxcomplete#Complete
 
- " start NERDTree on start-up and focus active window
- autocmd VimEnter * NERDTree
- autocmd VimEnter * wincmd p
+" start NERDTree on start-up and focus active window
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 
- " To close vim if the only windows open is nerdTree
- autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" To close vim if the only windows open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" nerdtree -git Config
+" NERDTree -git Config
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+  \ "Modified"  : "✹",
+  \ "Staged"    : "✚",
+  \ "Untracked" : "✭",
+  \ "Renamed"   : "➜",
+  \ "Unmerged"  : "═",
+  \ "Deleted"   : "✖",
+  \ "Dirty"     : "✗",
+  \ "Clean"     : "✔︎",
+  \ "Unknown"   : "?"
+  \ }
 
 " NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
 call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
@@ -101,6 +110,10 @@ call NERDTreeHighlightFile('scss', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('js', 'red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'magenta', 'none', '#ff00ff', '#151515')
 
+
+" Airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
 
 " suntastic config
 set statusline+=%#warningmsg#
@@ -118,7 +131,68 @@ let g:syntastic_check_on_wq = 0
 
 set wildignore+=*/tmp/*,*/node_modules/*,*/bower_components/*,*.so,*.swp,*.zip
 
-" Maps
+" Jshint2 Config
+let jshint2_read = 1
+let jshint2_save = 1
+
+" sass-lint config
+let g:syntastic_scss_checkers=["sass_lint"]
+
+
+" Vim-Indent-Lines
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd  ctermbg=236
+hi IndentGuidesEven ctermbg=233
+
+
+" Highlight Extra Whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+
+" Persistent Undo
+if !isdirectory($HOME."/.vim/undo-dir")
+  call mkdir($HOME."/.vim/undo-dir", "", 0700)
+endif
+
+set undodir=~/.vim/undo-dir
+set undofile
+
+" Rainbow Parentheses
+au VimEnter * RainbowParenthesesActivate
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+let g:rbpt_colorpairs = [
+  \ ['brown',       'RoyalBlue3'],
+  \ ['darkgray',    'DarkOrchid3'],
+  \ ['darkgreen',   'firebrick3'],
+  \ ['darkcyan',    'RoyalBlue3'],
+  \ ['darkred',     'SeaGreen3'],
+  \ ['darkmagenta', 'DarkOrchid3'],
+  \ ['brown',       'firebrick3'],
+  \ ['gray',        'RoyalBlue3'],
+  \ ['darkmagenta', 'DarkOrchid3'],
+  \ ['darkgreen',   'RoyalBlue3'],
+  \ ['darkcyan',    'SeaGreen3'],
+  \ ['darkred',     'DarkOrchid3'],
+  \ ['red',         'firebrick3'],
+  \ ]
+
+" tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
+autocmd FileType typescript setlocal completeopt+=menu,preview
+
+
+" MAPS
 
 let mapleader = "\<Space>" " <leader> is <space>
 
@@ -126,10 +200,16 @@ let mapleader = "\<Space>" " <leader> is <space>
 nmap <leader>1 :tabnew ~/.vimrc<CR>
 
 " open buffers
-nnoremap <F5> :ls<CR>:b<Space> 
+nnoremap <F5> :ls<CR>:b<Space>
 
 " toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+" Split Navigation
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-H> <C-W>h
+nnoremap <C-L> <C-W>l
 
 " macros
 let @l = 'Iconsole.log(A);'
@@ -146,5 +226,4 @@ nmap <leader>" @d
 
 let @b= 'o@include from(desktop) {}ko'
 nmap <leader>bp @b
-
 

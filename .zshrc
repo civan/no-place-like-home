@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/carlosvilla/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -87,10 +87,10 @@ export PATH=/usr/local/bin:$PATH:$HOME/google-cloud-sdk/bin/:$HOME/scripts
 source $ZSH/oh-my-zsh.sh
 
 
-alias grow="/Users/carlosvilla/bin/grow"
-alias grow@0.0.67="/Users/carlosvilla/bin/grow-0.0.67"
-alias grow@0.1.3="/Users/carlosvilla/bin/grow-0.1.3"
-alias sq="/Users/carlosvilla/.nvm/versions/node/v6.10.2/bin/stage-queue"
+alias grow="$HOME/bin/grow"
+alias grow@0.0.67="$HOME/bin/grow-0.0.67"
+alias grow@0.1.3="$HOME/bin/grow-0.1.3"
+alias sq="$HOME/.nvm/versions/node/v6.10.2/bin/stage-queue"
 
 #alias for vim to use Macvim
 alias vim="mvim -v"
