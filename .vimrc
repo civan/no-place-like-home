@@ -57,9 +57,6 @@ let g:syntastic_scss_checkers=["sass_lint"]
  Plugin 'nathanaelkane/vim-indent-guides'
  Plugin 'tomasiser/vim-code-dark'
 
-
-"Plugin 'dracula/vim'
-
  " -- Web Development
  Plugin 'Shutnik/jshint2.vim'
 
@@ -117,9 +114,37 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+" Ctrl p  config
+
+set wildignore+=*/tmp/*,*/node_modules/*,*/bower_components/*,*.so,*.swp,*.zip
+
+" Maps
+
+let mapleader = "\<Space>" " <leader> is <space>
+
+" no need to restar use :so %
+nmap <leader>1 :tabnew ~/.vimrc<CR>
+
+" open buffers
+nnoremap <F5> :ls<CR>:b<Space> 
+
+" toggle nerdtree
+map <C-n> :NERDTreeToggle<CR>
 
 " macros
 let @l = 'Iconsole.log(A);'
 nmap <leader>l @l
+
+let @c = 'a{}i==ko'
+nmap <leader>{ @c
+
+let @s= "a''"
+nmap <leader>' @s
+
+let @d= 'a""'
+nmap <leader>" @d
+
+let @b= 'o@include from(desktop) {}ko'
+nmap <leader>bp @b
+
+
