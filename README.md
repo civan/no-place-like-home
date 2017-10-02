@@ -1,7 +1,6 @@
 # No place like $HOME setup
 
-This repo adds a git repo for home to share same config accross multiples
-machines.
+This repo adds a git repo for home to share same config accross machines.
 
 [Vundle](https://github.com/VundleVim/Vundle.vim) Plugins:
 
@@ -19,7 +18,10 @@ machines.
 
 ## Installation
 
-1. Clone this repo, this is going to be your home
+1. Clone this repo, this is going to be your $HOME
+```
+cd $HOME
+```
 
 ```
 git init
