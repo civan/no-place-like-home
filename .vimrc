@@ -29,7 +29,7 @@ set directory=$HOME/.vim//
 set incsearch
 set ignorecase
 set cursorline
-set spell spelllang=en_us
+set spelllang=en_us " use :set spell
 set t_Co=256
 set term=xterm-256color
 set encoding=utf-8
@@ -58,7 +58,6 @@ Plugin 'shutnik/jshint2.vim'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'valloric/youcompleteme'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -109,35 +108,39 @@ call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('scss', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('js', 'red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('tpl', 'magenta', 'none', '#ff00ff', '#151515')
 
 
 " Airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
+" show buffers in tabs
+let g:airline#extensions#tabline#enabled = 1
 
-" suntastic config
+
+" syntastic config
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_javascript_checkers = ['gjslint']
-"let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_scss_checkers=['sass_lint']
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Ctrl p  config
+"not to check on html files
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ['html'] }
 
+" Ctrl-p config
 set wildignore+=*/tmp/*,*/node_modules/*,*/bower_components/*,*.so,*.swp,*.zip
 
 " Jshint2 Config
 let jshint2_read = 1
 let jshint2_save = 1
-
-" sass-lint config
-let g:syntastic_scss_checkers=["sass_lint"]
-
 
 " Vim-Indent-Lines
 let g:indent_guides_enable_on_vim_startup = 1
@@ -196,8 +199,8 @@ autocmd FileType typescript setlocal completeopt+=menu,preview
 
 let mapleader = "\<Space>" " <leader> is <space>
 
-" no need to restar use :so %
-nmap <leader>1 :tabnew ~/.vimrc<CR>
+" no need to restart use :so %
+nmap <leader>1 :edit ~/.vimrc<CR>
 
 " open buffers
 nnoremap <F5> :ls<CR>:b<Space>
@@ -210,6 +213,10 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
+
+" buffers navigation
+nnoremap <leader>n :bnext<CR>
+nnoremap <leader>p :bprev<CR>
 
 " macros
 let @l = 'Iconsole.log(A);'
