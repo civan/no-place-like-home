@@ -49,15 +49,15 @@ Plugin 'gcorne/vim-sass-lint'
 Plugin 'kien/ctrlp.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'vim-airline/vim-airline'
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'quramy/tsuquyomi'
+"Plugin 'quramy/tsuquyomi'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'shutnik/jshint2.vim'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-surround'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -217,6 +217,8 @@ nnoremap <C-L> <C-W>l
 " buffers navigation
 nnoremap <leader>n :bnext<CR>
 nnoremap <leader>p :bprev<CR>
+nnoremap <leader>x :bd<CR>
+nnoremap <leader>o :ls<CR>:b<space>
 
 " macros
 let @l = 'Iconsole.log(A);'
@@ -233,4 +235,7 @@ nmap <leader>" @d
 
 let @b= 'o@include from(desktop) {}ko'
 nmap <leader>bp @b
+
+let @h= 'i/** * */ka q€kb'
+nmap <leader>doc @h
 
