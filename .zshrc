@@ -92,13 +92,20 @@ alias grow@0.0.67="$HOME/bin/grow-0.0.67"
 alias grow@0.1.3="$HOME/bin/grow-0.1.3"
 alias sq="$HOME/.nvm/versions/node/v6.10.2/bin/stage-queue"
 
+# checks if a command exists
+command_exists () {
+  type "$1" &> /dev/null ;
+}
+
 #alias for vim to use Macvim
 # todo: check if mvim is installed first
-#alias vim="mvim -v"
-#alias vi="mvim -v"
-#alias v="mvim -v"
+if command_exists mvim ; then
+  alias vim="mvim -v"
+  alias vi="mvim -v"
+  alias v="mvim -v"
+fi
 
-#NVM 
+#NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
