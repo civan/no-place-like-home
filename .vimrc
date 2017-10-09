@@ -1,3 +1,38 @@
+filetype off                  " required
+
+" initiate plugins
+let &runtimepath.=',$HOME/.vim/bundle/Vundle.vim'
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+"start plugin definition
+
+Plugin 'airblade/vim-gitgutter'
+Plugin 'gcorne/vim-sass-lint'
+Plugin 'kien/ctrlp.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'vim-airline/vim-airline'
+"Plugin 'majutsushi/tagbar'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'quramy/tsuquyomi'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'shutnik/jshint2.vim'
+Plugin 'tomasiser/vim-code-dark'
+Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-surround'
+Plugin 'xuyuanp/nerdtree-git-plugin'
+Plugin 'vim-airline/vim-airline-themes'
+
+" end plugin definition
+call vundle#end()   " required for Vundle
+filetype plugin indent on    " required
+
+
+" Settings
 syntax on
 
 " default shell
@@ -34,42 +69,8 @@ set t_Co=256
 set term=xterm-256color
 set encoding=utf-8
 
-
-" initiate Vundle
-let &runtimepath.=',$HOME/.vim/bundle/Vundle.vim'
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-"start plugin definition
-
-Plugin 'airblade/vim-gitgutter'
-Plugin 'gcorne/vim-sass-lint'
-Plugin 'kien/ctrlp.vim'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'vim-airline/vim-airline'
-"Plugin 'majutsushi/tagbar'
-Plugin 'nathanaelkane/vim-indent-guides'
-"Plugin 'quramy/tsuquyomi'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'shutnik/jshint2.vim'
-Plugin 'tomasiser/vim-code-dark'
-Plugin 'tpope/vim-fugitive'
-"Plugin 'tpope/vim-surround'
-Plugin 'xuyuanp/nerdtree-git-plugin'
-Plugin 'vim-airline/vim-airline-themes'
-
-" end plugin definition
-call vundle#end()   " required for Vundle
-
-
 " color scheme
 colorscheme codedark
-
-" Omni Complete
-set omnifunc=syntaxcomplete#Complete
 
 " start NERDTree on start-up and focus active window
 autocmd VimEnter * NERDTree
@@ -108,6 +109,8 @@ call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('scss', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('js', 'red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('ts', 'blue', 'none', '#2b4f7e', '#2b4f7e')
+call NERDTreeHighlightFile('yaml', 'Magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('tpl', 'magenta', 'none', '#ff00ff', '#151515')
 
 
@@ -124,11 +127,15 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_javascript_checkers = ['gjslint']
-let g:syntastic_scss_checkers=['sass_lint']
+"let g:syntastic_javascript_checkers = ['gjslint']
+"let g:syntastic_scss_checkers=['sass_lint']
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+
+" Omni Complete
+set omnifunc=syntaxcomplete#Complete
 
 "not to check on html files
 let g:syntastic_mode_map = {
@@ -189,10 +196,19 @@ let g:rbpt_colorpairs = [
   \ ['red',         'firebrick3'],
   \ ]
 
+"vim typescript
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
 " tsuquyomi
 let g:tsuquyomi_disable_quickfix = 1
+let g:typescript_indent_disable = 1
 let g:syntastic_typescript_checkers = ['tsuquyomi']
-autocmd FileType typescript setlocal completeopt+=menu,preview
+"autocmd FileType typescript setlocal completeopt+=menu,preview
+autocmd FileType typescript :set makeprg=tsc
+setlocal indentkeys+=0
 
 
 " MAPS
@@ -236,6 +252,6 @@ nmap <leader>" @d
 let @b= 'o@include from(desktop) {}ko'
 nmap <leader>bp @b
 
-let @h= 'i/** * */ka q€kb'
+let @h= 'i/** * */==ka q€kb'
 nmap <leader>doc @h
 
