@@ -35,8 +35,6 @@ filetype plugin indent on    " required
 
 "General Settings
 syntax on
-" default shell
-set shell=/bin/zsh
 
 " set line numbers
 set number

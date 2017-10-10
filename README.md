@@ -27,7 +27,7 @@ cd $HOME
 git init
 git remote add origin https://github.com/civan/no-place-like-home.git
 git fetch
-git reset origin/master
+git reset --hard origin/master
 ```
 2. Install Vundle
 
