@@ -26,15 +26,15 @@ Plugin 'tpope/vim-fugitive'
 "Plugin 'tpope/vim-surround'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'jlanzarotta/bufexplorer'
 
 " end plugin definition
 call vundle#end()   " required for Vundle
 filetype plugin indent on    " required
 
 
-" Settings
+"General Settings
 syntax on
-
 " default shell
 set shell=/bin/zsh
 
@@ -68,6 +68,10 @@ set spelllang=en_us " use :set spell
 set t_Co=256
 set term=xterm-256color
 set encoding=utf-8
+
+" folding
+set foldmethod=indent
+set foldlevel=20
 
 " color scheme
 colorscheme codedark
@@ -212,6 +216,9 @@ setlocal indentkeys+=0
 
 
 " MAPS
+" | F5         --> List buffers and sets :b to open
+" | <space> o  --> Opens BufferExplorer
+" | <C> (movement)  --> Moves between panels
 
 let mapleader = "\<Space>" " <leader> is <space>
 
@@ -234,7 +241,8 @@ nnoremap <C-L> <C-W>l
 nnoremap <leader>n :bnext<CR>
 nnoremap <leader>p :bprev<CR>
 nnoremap <leader>x :bd<CR>
-nnoremap <leader>o :ls<CR>:b<space>
+nnoremap <leader>b :ls<CR>:b<space>
+nnoremap <leader>o :BufExplorer<CR>
 
 " macros
 let @l = 'Iconsole.log(A);'
