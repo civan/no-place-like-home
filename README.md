@@ -18,7 +18,7 @@ This repo adds a git repo for home to share same config accross machines.
 
 ## Installation
 
-1. Clone this repo, this is going to be your $HOME
+#### 1. Clone this repo, this is going to be your $HOME
 ```
 cd $HOME
 ```
@@ -29,19 +29,19 @@ git remote add origin https://github.com/civan/no-place-like-home.git
 git fetch
 git reset --hard origin/master
 ```
-2. Install Vundle
+#### 2. Install Vundle
 
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-3. Install plugins
+#### 3. Install plugins
 
 ```
 vim +PluginInstall +qall
 ```
 
-4. Scripts
+#### 4. Scripts
 
 give the rigth permision to the scripts
 
