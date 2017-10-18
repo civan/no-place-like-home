@@ -45,7 +45,7 @@ if [ ! -d "$DIRECTORY" ]; then
   fi
 
   #adds the alias to the shell
-  echo "alias grow@$VERSION=$DIRECTORY/grow\n" >> $SHELL_FILE
+  echo "alias grow@$VERSION=$DIRECTORY/grow" >> $SHELL_FILE
 
 else
   echo "Grow $VERSION is already installed"
