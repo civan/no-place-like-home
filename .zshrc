@@ -113,3 +113,4 @@ alias grow@0.2.0=/Users/carlosvilla/bin/grow-versions/0.2.0/grow
 
 alias grow@0.3.7=/Users/carlosvilla/bin/grow-versions/0.3.7/grow
 
+alias grow@0.3.8=/usr/local/google/home/carlosvilla/bin/grow-versions/0.3.8/grow\n

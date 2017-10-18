@@ -6,13 +6,18 @@ TEMP_ZIP="$TEMPDIR/temp_grow.zip"
 VERSION="${1}"
 GROW_VERSIONS_DIR="$HOME/bin/grow-versions"
 DIRECTORY="$GROW_VERSIONS_DIR/$VERSION";
+
+# checks the system
 SYSTEM="Grow-SDK-Mac";
+if [ "$(uname)" == "Linux" ]; then
+  SYSTEM="Grow-SDK-Linux";
+fi
+
 GROW_RELEASES="https://github.com/grow/grow/releases/download";
 BINARY_URL="$GROW_RELEASES/$VERSION/$SYSTEM-$VERSION.zip";
 SHELL_FILE="$HOME/.zshrc";
 
 if [ ! -d "$DIRECTORY" ]; then
-
   # creates the version folder
   if [ ! -d "$GROW_VERSIONS_DIR" ]; then
     mkdir $GROW_VERSIONS_DIR
