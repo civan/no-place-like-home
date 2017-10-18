@@ -50,7 +50,7 @@ sudo chmod 744 ~/scripts/*
 ```
 
 Current scripts:
-##### grow-versions.sh
+##### grow-version.sh
 To install multiple versions of [grow](https://github.com/grow/grow/releases/).
 
 Installing 0.2.0 version:
@@ -60,5 +60,5 @@ grow-version.sh 0.2.0
 
 Usage:
 ```
-grow0.2.0 --version
+grow@0.2.0 --version
 ```
