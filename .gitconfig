@@ -15,8 +15,10 @@
 
 [alias]
   s = status
+  l = log
   last = cat-file commit HEAD
   co = checkout
   pom = pull origin master
+  po = pull origin
   ca = commit --amend
   cr = !sh -c \"git push origin HEAD:refs/for/$1\"
