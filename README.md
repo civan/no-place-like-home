@@ -42,8 +42,8 @@ vim +PluginInstall +qall
 ```
 
 #### 4. Scripts
-
-give the rigth permision to the scripts
+please make sure you have the ~/scripts folder in your PATH.
+Give the rigth permision to the scripts:
 
 ```
 sudo chmod 744 ~/scripts/*
