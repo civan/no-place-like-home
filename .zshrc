@@ -88,9 +88,6 @@ source $ZSH/oh-my-zsh.sh
 
 
 alias grow="$HOME/bin/grow"
-alias grow@0.0.67="$HOME/bin/grow-0.0.67"
-alias grow@0.1.3="$HOME/bin/grow-0.1.3"
-alias sq="$HOME/.nvm/versions/node/v6.10.2/bin/stage-queue"
 
 # checks if a command exists
 command_exists () {
@@ -111,4 +108,8 @@ export NVM_DIR="$HOME/.nvm"
 
 #Yarn
 export PATH=$PATH:/usr/local/Cellar/yarn/0.27.5_1/bin/
+
+alias grow@0.2.0=/Users/carlosvilla/bin/grow-versions/0.2.0/grow
+
+alias grow@0.3.7=/Users/carlosvilla/bin/grow-versions/0.3.7/grow
 

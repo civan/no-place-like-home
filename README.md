@@ -40,3 +40,14 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 vim +PluginInstall +qall
 ```
+
+4. Scripts
+
+give the rigth permision to the scripts
+
+```
+sudo chmod 744 ~/scripts/*
+```
+
+Current scripts:
+ * grow-versions.sh version

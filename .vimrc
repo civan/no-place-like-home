@@ -129,7 +129,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_javascript_checkers = ['gjslint']
+let g:syntastic_javascript_checkers = ['gjslint']
 "let g:syntastic_scss_checkers=['sass_lint']
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -148,8 +148,8 @@ let g:syntastic_mode_map = {
 set wildignore+=*/tmp/*,*/node_modules/*,*/bower_components/*,*.so,*.swp,*.zip
 
 " Jshint2 Config
-let jshint2_read = 1
-let jshint2_save = 1
+"let jshint2_read = 1
+"let jshint2_save = 1
 
 " Vim-Indent-Lines
 let g:indent_guides_enable_on_vim_startup = 1
