@@ -1,9 +1,9 @@
-[submodule "bundle/Vundle.vim"]
-	path = bundle/Vundle.vim
-  url = https://github.com/VundleVim/Vundle.vim.git
-  branch = master
-
 [submodule "scripts"]
 	path = scripts
 	url = https://github.com/civan/scripts.git
-  branch = scripts
+  branch = master
+
+[submodule ".vim/bundle/Vundle.vim"]
+	path = .vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
+  branch = master
