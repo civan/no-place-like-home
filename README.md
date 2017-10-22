@@ -30,14 +30,16 @@ git fetch
 git reset --hard origin/master
 ```
 
-#### 2. Install Vundle
+#### 2. Install Submodules
 
+We have dependencies on :
+* [Vundle](https://github.com/VundleVim/Vundle.vim.git)
+* [Scripts](https://github.com/civan/scripts/)
 ```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+ git submodule update --init --recursive
 ```
 
-#### 3. Install plugins
-
+#### 3. Install vim plugins
 ```
 vim +PluginInstall +qall
 ```
