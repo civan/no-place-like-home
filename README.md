@@ -45,14 +45,13 @@ vim +PluginInstall +qall
 ```
 
 #### 4. Scripts
-Mmake sure you have the ~/scripts folder in your PATH.
+Make sure you have the ~/scripts folder in your PATH.
 Give the rigth permision to the scripts:
 
 ```
 sudo chmod 744 ~/scripts/*
 ```
 
-Current scripts:
 ##### grow-version.sh
 To install multiple versions of [grow](https://github.com/grow/grow/releases/).
 
