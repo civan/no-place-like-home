@@ -45,7 +45,7 @@ vim +PluginInstall +qall
 ```
 
 #### 4. Scripts
-please make sure you have the ~/scripts folder in your PATH.
+Mmake sure you have the ~/scripts folder in your PATH.
 Give the rigth permision to the scripts:
 
 ```
