@@ -51,7 +51,7 @@ Make sure you have the ~/scripts folder in your PATH.
  export PATH=$PATH:$HOME/bin:$HOME/scripts
 ```
 
-Give the rigth permision to the scripts:
+Grant the rigth permisions to the scripts:
 
 ```
 chmod +x ~/scripts/*
