@@ -54,7 +54,7 @@ Make sure you have the ~/scripts folder in your PATH.
 Give the rigth permision to the scripts:
 
 ```
-sudo chmod +x ~/scripts/*
+chmod +x ~/scripts/*
 ```
 
 ##### grow-use.sh
