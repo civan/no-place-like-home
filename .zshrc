@@ -83,7 +83,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=/usr/local/bin:$PATH:$HOME/google-cloud-sdk/bin/:$HOME/scripts
+export PATH=/usr/local/bin:$PATH:$HOME/google-cloud-sdk/bin/
+
+# Scripts path
+export PATH=$PATH:$HOME/bin/:$HOME/scripts/
+
 source $ZSH/oh-my-zsh.sh
 
 
@@ -109,9 +113,3 @@ export NVM_DIR="$HOME/.nvm"
 #Yarn
 export PATH=$PATH:/usr/local/Cellar/yarn/0.27.5_1/bin/
 
-alias grow@0.2.0=/Users/carlosvilla/bin/grow-versions/0.2.0/grow
-
-alias grow@0.3.7=/Users/carlosvilla/bin/grow-versions/0.3.7/grow
-
-alias grow@0.3.8=/usr/local/google/home/carlosvilla/bin/grow-versions/0.3.8/grow
-alias grow@0.2.0=/usr/local/google/home/carlosvilla/bin/grow-versions/0.2.0/grow
