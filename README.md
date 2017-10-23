@@ -30,13 +30,14 @@ git fetch
 git reset --hard origin/master
 ```
 
-#### 2. Install Submodules
+#### 2. Install/Update Submodules
 
 We have dependencies on :
 * [Vundle](https://github.com/VundleVim/Vundle.vim.git)
 * [Scripts](https://github.com/civan/scripts/)
+
 ```
- git submodule update --init --recursive
+ git submodule update --remote --recursive
 ```
 
 #### 3. Install vim plugins
@@ -46,21 +47,29 @@ vim +PluginInstall +qall
 
 #### 4. Scripts
 Make sure you have the ~/scripts folder in your PATH.
+```
+ export PATH=$PATH:$HOME/bin:$HOME/scripts
+```
+
 Give the rigth permision to the scripts:
 
 ```
-sudo chmod 744 ~/scripts/*
+sudo chmod +x ~/scripts/*
 ```
 
-##### grow-version.sh
-To install multiple versions of [grow](https://github.com/grow/grow/releases/).
+##### grow-use.sh
+To use specific versions of [grow](https://github.com/grow/grow/releases/).
 
-Installing 0.2.0 version:
+Using 0.2.0 version:
 ```
-grow-version.sh 0.2.0
+grow-use.sh 0.2.0
 ```
 
-Usage:
+Try:
+```
+grow --version
+```
+or
 ```
 grow@0.2.0 --version
 ```
