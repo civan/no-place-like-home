@@ -9,10 +9,6 @@
   helper = cache
 [apply]
   whitespace = warn
-
-[commit]
-  template = ~/scripts/.commit-message-template
-
 [alias]
   s = status
   l = log
