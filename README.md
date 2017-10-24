@@ -37,7 +37,7 @@ We have dependencies on :
 * [Scripts](https://github.com/civan/scripts/)
 
 ```
- git submodule update --remote --recursive
+ git submodule update --init --recursive
 ```
 
 #### 3. Install vim plugins
