@@ -5,4 +5,5 @@
 !/.gitignore
 !/.gitconfig
 !/.gitmodules
+!/vim-snippets
 !README.md

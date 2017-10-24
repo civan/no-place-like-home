@@ -261,3 +261,15 @@ nmap <leader>bp @b
 let @h= 'i/** * */==ka q€kb'
 nmap <leader>doc @h
 
+
+" snippets
+
+" HTML skeleton
+nnoremap <leader>html :-1read $HOME/vim-snippets/html/skeleton.html<CR>
+
+" empty jinja macro
+nnoremap <leader>macro :-1read $HOME/vim-snippets/jinja/empty-macro.tpl<CR>2wce
+
+" js querySelector all
+nnoremap <leader>qsa :read $HOME/vim-snippets/js/query-selector-all.js<CR>
+
