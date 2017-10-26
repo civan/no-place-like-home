@@ -20,13 +20,14 @@ Plugin 'quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'shutnik/jshint2.vim'
+"Plugin 'shutnik/jshint2.vim'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'tpope/vim-fugitive'
 "Plugin 'tpope/vim-surround'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'darthmall/vim-vue'
 
 " end plugin definition
 call vundle#end()   " required for Vundle
@@ -114,6 +115,7 @@ call NERDTreeHighlightFile('php', 'magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('ts', 'blue', 'none', '#2b4f7e', '#2b4f7e')
 call NERDTreeHighlightFile('yaml', 'Magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('tpl', 'magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('vue', 'green', 'none', '#ff00ff', '#151515')
 
 
 " Airline
@@ -129,10 +131,10 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_javascript_checkers = ['gjslint']
-"let g:syntastic_scss_checkers=['sass_lint']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_scss_checkers=['sass_lint']
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 
