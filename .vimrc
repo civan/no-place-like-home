@@ -214,6 +214,16 @@ let g:syntastic_typescript_checkers = ['tsuquyomi']
 autocmd FileType typescript :set makeprg=tsc
 setlocal indentkeys+=0
 
+" Always show line numbers in relative mode
+set number relativenumber
+
+" Toogle relative line numbers
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set number relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set number norelativenumber
+:augroup END
+
 
 " MAPS
 " | F5         --> List buffers and sets :b to open
@@ -236,6 +246,12 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
+
+"disable arrows
+nnoremap <Up> :echo 'nope!'<CR>
+nnoremap <Down> :echo 'nope!'<CR>
+nnoremap <Left> :echo 'nope!'<CR>
+nnoremap <Right> :echo 'nope!'<CR>
 
 " buffers navigation
 nnoremap <leader>n :bnext<CR>
