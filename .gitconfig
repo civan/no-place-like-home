@@ -11,7 +11,8 @@
   whitespace = warn
 [alias]
   s = status
-  l = log
+  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --stat
   last = cat-file commit HEAD
   co = checkout
   pom = pull origin master

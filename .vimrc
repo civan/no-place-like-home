@@ -20,7 +20,6 @@ Plugin 'quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-"Plugin 'shutnik/jshint2.vim'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'tpope/vim-fugitive'
 "Plugin 'tpope/vim-surround'
@@ -34,7 +33,7 @@ call vundle#end()   " required for Vundle
 filetype plugin indent on    " required
 
 
-"General Settings
+" General Settings
 syntax on
 
 " set line numbers
@@ -58,6 +57,10 @@ set laststatus=2
 set textwidth=80 "set tw=80
 set colorcolumn=80 "set cc=80
 
+" lets you open a buffer with unsaved changes
+set hidden
+
+" vim folder
 set directory=$HOME/.vim//
 
 set incsearch
@@ -224,6 +227,15 @@ set number relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set number norelativenumber
 :augroup END
 
+" incremental search
+if has("patch-8.0.1238")
+  augroup vimrc-incsearch-highlight
+    autocmd!
+    autocmd CmdlineEnter [/\?] :set hlsearch
+    autocmd CmdlineLeave [/\?] :set nohlsearch
+  augroup END
+endif
+
 
 " MAPS
 " | F5         --> List buffers and sets :b to open
@@ -234,6 +246,9 @@ let mapleader = "\<Space>" " <leader> is <space>
 
 " no need to restart use :so %
 nmap <leader>1 :edit ~/.vimrc<CR>
+
+" open .zshrc
+nmap <leader>2 :edit ~/.zshrc<CR>
 
 " open buffers
 nnoremap <F5> :ls<CR>:b<Space>
@@ -247,11 +262,14 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 
-"disable arrows
+" disable arrows
 nnoremap <Up> :echo 'nope!'<CR>
 nnoremap <Down> :echo 'nope!'<CR>
 nnoremap <Left> :echo 'nope!'<CR>
 nnoremap <Right> :echo 'nope!'<CR>
+
+" escape
+inoremap jj <Esc>
 
 " buffers navigation
 nnoremap <leader>n :bnext<CR>

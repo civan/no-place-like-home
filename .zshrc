@@ -103,7 +103,11 @@ command_exists () {
 if command_exists mvim ; then
   alias vim="mvim -v"
   alias vi="mvim -v"
-  alias v="mvim -v"
+fi
+
+# custom built vim version
+if [ -e "/usr/local/bin/vim" ]; then
+  alias v="/usr/local/bin/vim"
 fi
 
 #NVM
