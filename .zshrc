@@ -103,6 +103,7 @@ command_exists () {
 if command_exists mvim ; then
   alias vim="mvim -v"
   alias vi="mvim -v"
+  export EDITOR='mvim -v'
 fi
 
 # custom built vim version

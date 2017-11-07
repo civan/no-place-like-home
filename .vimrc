@@ -22,11 +22,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'darthmall/vim-vue'
+Plugin 'valloric/youcompleteme'
 
 " end plugin definition
 call vundle#end()   " required for Vundle
@@ -216,6 +217,9 @@ let g:syntastic_typescript_checkers = ['tsuquyomi']
 "autocmd FileType typescript setlocal completeopt+=menu,preview
 autocmd FileType typescript :set makeprg=tsc
 setlocal indentkeys+=0
+
+" Omni Complete
+set omnifunc=syntaxcomplete#Complete
 
 " Always show line numbers in relative mode
 set number relativenumber
