@@ -282,6 +282,9 @@ nnoremap <leader>x :bd<CR>
 nnoremap <leader>b :ls<CR>:b<space>
 nnoremap <leader>o :BufExplorer<CR>
 
+" To Reveal current file in directory
+nnoremap <leader>r :NERDTreeFind<CR>
+
 " macros
 let @l = 'Iconsole.log(A);'
 nmap <leader>l @l

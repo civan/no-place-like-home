@@ -3,8 +3,8 @@
 [core]
   editor = /usr/bin/vim
 [user]
-	name = Iván Mercado
-	email = c_ivanmercado@hotmail.com
+  name = Iván Mercado
+  email = c_ivanmercado@hotmail.com
 [credential]
   helper = cache
 [apply]
@@ -19,3 +19,8 @@
   po = pull origin
   ca = commit --amend
   cr = !sh -c \"git push origin HEAD:refs/for/$1\"
+  detach = checkout --detach
+[commit]
+	template = .commit-message-template
+[pull]
+	rebase = true
