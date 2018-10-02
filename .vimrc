@@ -14,7 +14,7 @@ Plugin 'gcorne/vim-sass-lint'
 Plugin 'kien/ctrlp.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'vim-airline/vim-airline'
-"Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
@@ -121,10 +121,14 @@ call NERDTreeHighlightFile('yaml', 'Magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('tpl', 'magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('vue', 'green', 'none', '#ff00ff', '#151515')
 
+" Vue
+let g:syntastic_vue_checkers = ['eslint']
+
 
 " Airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:Powerline_symbols = 'fancy'
 " show buffers in tabs
 let g:airline#extensions#tabline#enabled = 1
 
@@ -136,26 +140,21 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_sass_checkers=["sasslint"]
 let g:syntastic_scss_checkers=['sass_lint']
 let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_check_on_wq = 1
 
 
 " Omni Complete
 set omnifunc=syntaxcomplete#Complete
 
 "not to check on html files
-let g:syntastic_mode_map = {
-    \ "mode": "active",
-    \ "passive_filetypes": ['html'] }
+let g:syntastic_html_checkers=['tidy']
 
 " Ctrl-p config
 set wildignore+=*/tmp/*,*/node_modules/*,*/bower_components/*,*.so,*.swp,*.zip
-
-" Jshint2 Config
-"let jshint2_read = 1
-"let jshint2_save = 1
 
 " Vim-Indent-Lines
 let g:indent_guides_enable_on_vim_startup = 1
@@ -276,21 +275,26 @@ nnoremap <Right> :echo 'nope!'<CR>
 inoremap jj <Esc>
 
 " buffers navigation
-nnoremap <leader>n :bnext<CR>
-nnoremap <leader>p :bprev<CR>
+nnoremap <leader>bn :bnext<CR>
+nnoremap <leader>bp :bprev<CR>
 nnoremap <leader>x :bd<CR>
 nnoremap <leader>b :ls<CR>:b<space>
 nnoremap <leader>o :BufExplorer<CR>
 
+" copy/pasting clipboard
+noremap <Leader>p "*p
+noremap <Leader>y "*y
+
 " To Reveal current file in directory
 nnoremap <leader>r :NERDTreeFind<CR>
+
+" Open an overview of current file by using Tagbar, hot key: F8 "
+nmap <F8> :TagbarToggle<CR>
+
 
 " macros
 let @l = 'Iconsole.log(A);'
 nmap <leader>l @l
-
-let @c = 'a{}i==ko'
-nmap <leader>{ @c
 
 let @s= "a''"
 nmap <leader>' @s
@@ -304,6 +308,11 @@ nmap <leader>bp @b
 let @h= 'i/** * */==ka q€kb'
 nmap <leader>doc @h
 
+let @c = 'I// '
+nmap <leader>c @c
+
+" uncomment
+nmap <leader>uc :s/\/\/ /<CR>
 
 " snippets
 

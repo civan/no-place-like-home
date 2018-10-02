@@ -29,7 +29,7 @@ ZSH_THEME="avit"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
- ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -117,4 +117,7 @@ export NVM_DIR="$HOME/.nvm"
 
 #Yarn
 export PATH=$PATH:/usr/local/Cellar/yarn/0.27.5_1/bin/
+
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

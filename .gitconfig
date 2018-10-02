@@ -1,10 +1,10 @@
 [http]
-  cookiefile = /Users/carlosvilla/.gitcookies
+	cookiefile = /Users/carlosvilla/.gitcookies
 [core]
   editor = /usr/bin/vim
 [user]
-  name = Iván Mercado
-  email = c_ivanmercado@hotmail.com
+	name = Carlos
+	email = carlosvilla@google.com
 [credential]
   helper = cache
 [apply]
