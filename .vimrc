@@ -16,7 +16,7 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'quramy/tsuquyomi'
+" Plugin 'quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -210,12 +210,12 @@ autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
 " tsuquyomi
-let g:tsuquyomi_disable_quickfix = 1
-let g:typescript_indent_disable = 1
-let g:syntastic_typescript_checkers = ['tsuquyomi']
-"autocmd FileType typescript setlocal completeopt+=menu,preview
-autocmd FileType typescript :set makeprg=tsc
-setlocal indentkeys+=0
+" let g:tsuquyomi_disable_quickfix = 1
+" let g:typescript_indent_disable = 1
+" let g:syntastic_typescript_checkers = ['tsuquyomi']
+" "autocmd FileType typescript setlocal completeopt+=menu,preview
+" autocmd FileType typescript :set makeprg=tsc
+" setlocal indentkeys+=0
 
 " Omni Complete
 set omnifunc=syntaxcomplete#Complete
