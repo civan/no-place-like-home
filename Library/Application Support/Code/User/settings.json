@@ -19,7 +19,6 @@
         "before": ["<leader>", "d"],
         "after": ["d", "d"]
       },
-      // copy/pasting from clipboard
       {
         "before": ["<leader>", "y"],
         "after": ["\"", "*", "y", "<ESC>"]
@@ -58,5 +57,8 @@
     "vim.handleKeys": {
       "<C-a>": false,
       "<C-f>": false
-    }
+    },
+    "cSpell.userWords": [
+      "webp"
+    ]
 }
