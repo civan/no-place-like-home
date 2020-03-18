@@ -28,6 +28,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'darthmall/vim-vue'
 Plugin 'valloric/youcompleteme'
+Plugin 'tpope/vim-commentary'
 
 " end plugin definition
 call vundle#end()   " required for Vundle

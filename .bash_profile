@@ -1,6 +1,4 @@
 export BASH_CONF="bash_profile"
-# Added by Grow SDK Installer (2016-09-08 12:19:36.303578)
-alias grow="/Users/carlosvilla/bin/grow"
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 export PATH=/usr/local/bin:$PATH:$HOME/google-cloud-sdk/bin/:$HOME/scripts

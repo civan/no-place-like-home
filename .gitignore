@@ -6,4 +6,5 @@
 !/.gitconfig
 !/.gitmodules
 !/vim-snippets
+!/Library/Application Support/Code/User/settings.json
 !README.md

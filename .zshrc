@@ -121,3 +121,10 @@ export PATH=$PATH:/usr/local/Cellar/yarn/0.27.5_1/bin/
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+ZSH_DISABLE_COMPFIX=true
+
+
+# Added by Grow SDK Installer (2020-03-16 17:39:43.076808)
+export PATH=/Users/carlosvilla/bin:$PATH
+# Added by Grow SDK Installer (2020-03-16 17:41:32.225518)
+export PATH=/Users/carlosvilla/bin:$PATH
