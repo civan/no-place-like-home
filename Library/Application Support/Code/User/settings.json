@@ -1,0 +1,62 @@
+{
+    "workbench.settings.editor": "json",
+    "vim.easymotion": true,
+    "vim.surround": true,
+    "vim.camelCaseMotion.enable": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": false,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.foldfix": true,
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+      },
+      // copy/pasting from clipboard
+      {
+        "before": ["<leader>", "y"],
+        "after": ["\"", "*", "y", "<ESC>"]
+      },
+      {
+        "before": ["<leader>", "p"],
+        "after": ["\"", "*", "p"]
+      },
+      {
+        "before": ["<leader>", "r"],
+        "commands": [
+          "workbench.view.explorer",
+          "workbench.files.action.showActiveFileInExplorer"
+        ]
+      },
+      {
+        "before": ["<leader>", "o"],
+        "commands": [
+            "workbench.action.quickOpen"
+        ]
+      },
+      {
+        "before": ["<C-l>"],
+        "commands": [
+          "workbench.action.focusNextGroup"
+        ]
+      },
+      {
+        "before": ["<C-h>"],
+        "commands": [
+          "workbench.action.focusPreviousGroup"
+        ]
+      }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false
+    }
+}
