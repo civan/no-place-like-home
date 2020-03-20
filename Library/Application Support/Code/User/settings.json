@@ -59,6 +59,26 @@
       "<C-f>": false
     },
     "cSpell.userWords": [
+      "susy",
       "webp"
-    ]
+    ],
+    "workbench.iconTheme": "vscode-icons",
+    "yaml.customTags": [
+      "!g.yaml",
+      "!g.doc",
+      "!g.url"
+    ],
+    "editor.lineNumbers": "relative",
+    "[scss]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "files.associations": {
+      "*.tpl": "jinja"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+    }
 }
