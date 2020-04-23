@@ -21,7 +21,7 @@
       },
       {
         "before": ["<leader>", "y"],
-        "after": ["\"", "*", "y", "<ESC>"]
+        "after": ["\"", "*", "y"]
       },
       {
         "before": ["<leader>", "p"],
@@ -59,7 +59,13 @@
       "<C-f>": false
     },
     "cSpell.userWords": [
+      "Buganizer",
+      "Gerrit",
+      "nocheck",
+      "objectcache",
+      "promisify",
       "susy",
+      "tweenmax",
       "webp"
     ],
     "workbench.iconTheme": "vscode-icons",
@@ -76,9 +82,35 @@
       "editor.defaultFormatter": "HookyQR.beautify"
     },
     "files.associations": {
-      "*.tpl": "jinja"
+      "*.tpl": "jinja-html"
     },
     "[json]": {
       "editor.defaultFormatter": "HookyQR.beautify"
-    }
+    },
+    "editor.rulers": [
+      { "column": 80, "color": "#584858" },
+      { "column": 120, "color": "#490808" }
+    ],
+    "[jinja-html]": {},
+  "window.zoomLevel": 0,
+  "cSpell.enableFiletypes": [
+    "ssh_config"
+  ],
+  "markdown.previewFeatures": true,
+  "markdown.preview.breaks": false,
+  "markdown.styles": [
+   // "github-markdown.css"
+  ],
+  "markdownlint.config": {
+    "default": true,
+    "MD012": false,
+    "MD004": false
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.editor.showTabs": true
 }
