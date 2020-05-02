@@ -51,6 +51,12 @@
         "commands": [
           "workbench.action.focusPreviousGroup"
         ]
+      },
+      {
+        "before": ["g", "r"],
+        "commands": [
+          "editor.action.rename"
+        ]
       }
     ],
     "vim.leader": "<space>",
@@ -61,6 +67,7 @@
     "cSpell.userWords": [
       "Buganizer",
       "Gerrit",
+      "ngrx",
       "nocheck",
       "objectcache",
       "promisify",
