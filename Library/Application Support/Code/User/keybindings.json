@@ -107,19 +107,19 @@
         "command": "-workbench.action.quit"
     },
     {
-        "key": "ctrl+cmd+n",
+        "key": "alt+cmd+n",
         "command": "workbench.action.terminal.newInActiveWorkspace"
     },
     {
-        "key": "ctrl+cmd+j",
+        "key": "alt+cmd+j",
         "command": "workbench.action.terminal.focusNextPane"
     },
     {
-        "key": "ctrl+cmd+k",
+        "key": "alt+cmd+k",
         "command": "workbench.action.terminal.focusPreviousPane"
     },
     {
-      "key": "ctrl+cmd+w",
+      "key": "alt+cmd+w",
       "command": "workbench.action.terminal.kill"
     },
     {
@@ -139,11 +139,11 @@
         "command": "workbench.action.terminal.focusAtIndex4"
     },
     {
-        "key": "ctrl+cmd+l",
+        "key": "alt+cmd+l",
         "command": "workbench.action.terminal.focusNext"
     },
     {
-        "key": "ctrl+cmd+h",
+        "key": "alt+cmd+h",
         "command": "workbench.action.terminal.focusPrevious"
     },
     {
