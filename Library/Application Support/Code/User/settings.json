@@ -8,13 +8,38 @@
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.foldfix": true,
+    "trailing-spaces.highlightCurrentLine": false,
     "vim.insertModeKeyBindings": [
       {
         "before": ["j", "j"],
         "after": ["<Esc>"]
       }
     ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "y"],
+        "after": ["\"", "*", "y"]
+      },
+      {
+        "before": ["<leader>", "p"],
+        "after": ["\"", "*", "p"]
+      },
+    ],
     "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "c"],
+        "commands": ["editor.action.dirtydiff.next"]
+      },
+      {
+        "before": ["gn"],
+        "commands": ["editor.action.dirtydiff.next"],
+        "when": "dirtyDiffVisible"
+      },
+      {
+        "before": ["gN"],
+        "commands": ["editor.action.dirtydiff.previous"],
+        "when": "dirtyDiffVisible"
+      },
       {
         "before": ["<leader>", "d"],
         "after": ["d", "d"]
@@ -57,6 +82,12 @@
         "commands": [
           "editor.action.rename"
         ]
+      },
+      {
+        "before": ["g", "o"],
+        "commands": [
+          "editor.action.openLink"
+        ]
       }
     ],
     "vim.leader": "<space>",
@@ -66,6 +97,7 @@
     },
     "cSpell.userWords": [
       "Buganizer",
+      "Devs",
       "Gerrit",
       "ngrx",
       "nocheck",
@@ -89,7 +121,8 @@
       "editor.defaultFormatter": "HookyQR.beautify"
     },
     "files.associations": {
-      "*.tpl": "jinja-html"
+      "*.tpl": "jinja-html",
+      ".firebaserc": "json"
     },
     "[json]": {
       "editor.defaultFormatter": "HookyQR.beautify"
@@ -99,7 +132,7 @@
       { "column": 120, "color": "#490808" }
     ],
     "[jinja-html]": {},
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "cSpell.enableFiletypes": [
     "ssh_config"
   ],
@@ -119,5 +152,39 @@
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "workbench.editor.showTabs": true
+  "workbench.editor.showTabs": true,
+  "window.nativeTabs": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.experimentalLinkProvider": true,
+  "terminal.integrated.experimentalUseTitleEvent": true,
+  "editor.suggest.statusBar.visible": true,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#005f5f"],
+  "vim.statusBarColors.insert": "#490000",
+  "vim.statusBarColors.visual": "#003364",
+  "vim.statusBarColors.visualline": "#003364",
+  "vim.statusBarColors.visualblock": "#001937",
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": "#411c11",
+  "vim.statusBarColors.searchinprogressmode": "#6f4311",
+  "vim.statusBarColors.easymotionmode": "#00ff00",
+  "vim.statusBarColors.easymotioninputmode": "#ff0000",
+  "vim.statusBarColors.surroundinputmode": "#392855",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f",
+    "activityBar.background": "#0d1d31",
+    "titleBar.activeBackground": "#1f2435",
+    "titleBar.activeForeground": "#F2FEF4"
+  },
+  "window.closeWhenEmpty": true,
+  "window.title": "${rootName}",
+  "workbench.activityBar.visible": true,
+  "workbench.preferredLightColorTheme": "Red",
+  "search.searchOnType": false,
+  "editor.accessibilitySupport": "off",
+  "editor.tabSize": 2,
+  "tizen.workspace.path": "/Users/carlosvilla/workspace",
+  "tizen.chrome.path": "Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
 }

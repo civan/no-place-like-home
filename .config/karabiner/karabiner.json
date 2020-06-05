@@ -101,7 +101,24 @@
             "devices": [
                 {
                     "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
+                    "fn_function_keys": [
+                        {
+                            "from": {
+                                "key_code": "f1"
+                            },
+                            "to": {
+                                "key_code": "f1"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "f8"
+                            },
+                            "to": {
+                                "key_code": "f8"
+                            }
+                        }
+                    ],
                     "identifiers": {
                         "is_keyboard": true,
                         "is_pointing_device": false,
@@ -113,10 +130,10 @@
                     "simple_modifications": [
                         {
                             "from": {
-                                "key_code": "left_option"
+                                "key_code": "caps_lock"
                             },
                             "to": {
-                                "key_code": "left_command"
+                                "key_code": "escape"
                             }
                         },
                         {
@@ -125,6 +142,14 @@
                             },
                             "to": {
                                 "key_code": "left_option"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_option"
+                            },
+                            "to": {
+                                "key_code": "left_command"
                             }
                         },
                         {
@@ -133,14 +158,6 @@
                             },
                             "to": {
                                 "key_code": "right_option"
-                            }
-                        },
-                        {
-                            "from": {
-                                "key_code": "caps_lock"
-                            },
-                            "to": {
-                                "key_code": "escape"
                             }
                         },
                         {

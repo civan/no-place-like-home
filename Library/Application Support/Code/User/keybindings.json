@@ -70,7 +70,7 @@
         "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
     },
     {
-        "key": "cmd+t",
+        "key": "alt+cmd+t",
         "command": "workbench.action.togglePanel"
     },
     {
@@ -306,5 +306,131 @@
     {
         "key": "cmd+3",
         "command": "-workbench.action.focusThirdEditorGroup"
-    }
+    },
+    {
+        "key": "alt+cmd+t",
+        "command": "-workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "cmd+left",
+        "command": "workbench.action.showPreviousWindowTab"
+    },
+    {
+        "key": "cmd+right",
+        "command": "workbench.action.showNextWindowTab"
+    },
+    {
+        "key": "shift+cmd+right",
+        "command": "workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "-workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+right",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "shift+cmd+left",
+        "command": "workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+cmd+left",
+        "command": "-workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+left",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+cmd+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "cmd+down",
+        "command": "workbench.action.terminal.resizePaneDown",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+cmd+down",
+        "command": "-workbench.action.terminal.resizePaneDown",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+up",
+        "command": "workbench.action.terminal.resizePaneUp",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+cmd+up",
+        "command": "-workbench.action.terminal.resizePaneUp",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+down",
+        "command": "search.action.focusNextSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "f4",
+        "command": "-search.action.focusNextSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "shift+up",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "shift+f4",
+        "command": "-search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "shift+o",
+        "command": "search.action.expandSearchResults",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "shift+x",
+        "command": "search.action.collapseSearchResults",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.dirtydiff.next",
+        "when": "dirtyDiffVisible"
+    },
+    {
+        "key": "alt+f3",
+        "command": "-editor.action.dirtydiff.next",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "editor.action.dirtydiff.previous",
+        "when": "dirtyDiffVisible"
+    },
+    {
+        "key": "shift+alt+f3",
+        "command": "-editor.action.dirtydiff.previous",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+m",
+        "command": "-workbench.actions.view.problems"
+    },
+    {
+        "key": "alt+cmd+b",
+        "command": "gitlens.toggleLineBlame"
+    },
 ]

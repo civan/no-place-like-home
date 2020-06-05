@@ -266,11 +266,13 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 
-" disable arrows
-nnoremap <Up> :echo 'nope!'<CR>
-nnoremap <Down> :echo 'nope!'<CR>
-nnoremap <Left> :echo 'nope!'<CR>
-nnoremap <Right> :echo 'nope!'<CR>
+
+" Split Navigation
+nnoremap <Down> <C-W>j
+nnoremap <Up> <C-W>k
+nnoremap <Left> <C-W>h
+nnoremap <Right> <C-W>l
+
 
 " escape
 inoremap jj <Esc>
