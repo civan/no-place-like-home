@@ -1,145 +1,225 @@
 {
-    "workbench.settings.editor": "json",
-    "vim.easymotion": true,
-    "vim.surround": true,
-    "vim.camelCaseMotion.enable": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": false,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.foldfix": true,
-    "trailing-spaces.highlightCurrentLine": false,
-    "vim.insertModeKeyBindings": [
-      {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
-      }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-      {
-        "before": ["<leader>", "y"],
-        "after": ["\"", "*", "y"]
-      },
-      {
-        "before": ["<leader>", "p"],
-        "after": ["\"", "*", "p"]
-      },
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-      {
-        "before": ["<leader>", "c"],
-        "commands": ["editor.action.dirtydiff.next"]
-      },
-      {
-        "before": ["gn"],
-        "commands": ["editor.action.dirtydiff.next"],
-        "when": "dirtyDiffVisible"
-      },
-      {
-        "before": ["gN"],
-        "commands": ["editor.action.dirtydiff.previous"],
-        "when": "dirtyDiffVisible"
-      },
-      {
-        "before": ["<leader>", "d"],
-        "after": ["d", "d"]
-      },
-      {
-        "before": ["<leader>", "y"],
-        "after": ["\"", "*", "y"]
-      },
-      {
-        "before": ["<leader>", "p"],
-        "after": ["\"", "*", "p"]
-      },
-      {
-        "before": ["<leader>", "r"],
-        "commands": [
-          "workbench.view.explorer",
-          "workbench.files.action.showActiveFileInExplorer"
-        ]
-      },
-      {
-        "before": ["<leader>", "o"],
-        "commands": [
-            "workbench.action.quickOpen"
-        ]
-      },
-      {
-        "before": ["<C-l>"],
-        "commands": [
-          "workbench.action.focusNextGroup"
-        ]
-      },
-      {
-        "before": ["<C-h>"],
-        "commands": [
-          "workbench.action.focusPreviousGroup"
-        ]
-      },
-      {
-        "before": ["g", "r"],
-        "commands": [
-          "editor.action.rename"
-        ]
-      },
-      {
-        "before": ["g", "o"],
-        "commands": [
-          "editor.action.openLink"
-        ]
-      }
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-      "<C-a>": false,
-      "<C-f>": false
+  "workbench.settings.editor": "json",
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": false,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.foldfix": true,
+  "trailing-spaces.highlightCurrentLine": false,
+  "editor.renderWhitespace": "selection",
+  "editor.formatOnSave": true,
+  "editor.find.cursorMoveOnType": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "y"
+      ],
+      "after": [
+        "\"",
+        "*",
+        "y"
+      ]
     },
-    "cSpell.userWords": [
-      "Buganizer",
-      "Devs",
-      "Gerrit",
-      "ngrx",
-      "nocheck",
-      "objectcache",
-      "promisify",
-      "susy",
-      "tweenmax",
-      "webp"
-    ],
-    "workbench.iconTheme": "vscode-icons",
-    "yaml.customTags": [
-      "!g.yaml",
-      "!g.doc",
-      "!g.url"
-    ],
-    "editor.lineNumbers": "relative",
-    "[scss]": {
-      "editor.defaultFormatter": "HookyQR.beautify"
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "after": [
+        "\"",
+        "*",
+        "p"
+      ]
     },
-    "[html]": {
-      "editor.defaultFormatter": "HookyQR.beautify"
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "editor.action.dirtydiff.next"
+      ]
     },
-    "files.associations": {
-      "*.tpl": "jinja-html",
-      ".firebaserc": "json"
+    {
+      "before": [
+        "gn"
+      ],
+      "commands": [
+        "editor.action.dirtydiff.next"
+      ],
+      "when": "dirtyDiffVisible"
     },
-    "[json]": {
-      "editor.defaultFormatter": "HookyQR.beautify"
+    {
+      "before": [
+        "gN"
+      ],
+      "commands": [
+        "editor.action.dirtydiff.previous"
+      ],
+      "when": "dirtyDiffVisible"
     },
-    "editor.rulers": [
-      { "column": 80, "color": "#584858" },
-      { "column": 120, "color": "#490808" }
-    ],
-    "[jinja-html]": {},
-  "window.zoomLevel": 1,
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "y"
+      ],
+      "after": [
+        "\"",
+        "*",
+        "y"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "after": [
+        "\"",
+        "*",
+        "p"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r"
+      ],
+      "commands": [
+        "workbench.view.explorer",
+        "workbench.files.action.showActiveFileInExplorer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "commands": [
+        "workbench.action.focusNextGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "commands": [
+        "workbench.action.focusPreviousGroup"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "o"
+      ],
+      "commands": [
+        "editor.action.openLink"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "cSpell.userWords": [
+    "Buganizer",
+    "Devs",
+    "Gerrit",
+    "Lpaas",
+    "OKRs",
+    "drei",
+    "ngrx",
+    "nocheck",
+    "objectcache",
+    "plentycode",
+    "promisify",
+    "susy",
+    "tweenmax",
+    "webp"
+  ],
+  "workbench.iconTheme": "vscode-icons",
+  "yaml.customTags": [
+    "!g.yaml",
+    "!g.doc",
+    "!g.url"
+  ],
+  "editor.lineNumbers": "relative",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "files.associations": {
+    "*.tpl": "jinja-html",
+    ".firebaserc": "json"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#584858"
+    },
+    {
+      "column": 120,
+      "color": "#490808"
+    }
+  ],
+  "[jinja-html]": {},
   "cSpell.enableFiletypes": [
     "ssh_config"
   ],
   "markdown.previewFeatures": true,
   "markdown.preview.breaks": false,
   "markdown.styles": [
-   // "github-markdown.css"
+    // "github-markdown.css"
   ],
   "markdownlint.config": {
     "default": true,
@@ -147,10 +227,10 @@
     "MD004": false
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.showTabs": true,
   "window.nativeTabs": true,
@@ -159,7 +239,9 @@
   "terminal.integrated.experimentalUseTitleEvent": true,
   "editor.suggest.statusBar.visible": true,
   "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": ["#005f5f"],
+  "vim.statusBarColors.normal": [
+    "#005f5f"
+  ],
   "vim.statusBarColors.insert": "#490000",
   "vim.statusBarColors.visual": "#003364",
   "vim.statusBarColors.visualline": "#003364",
@@ -170,21 +252,52 @@
   "vim.statusBarColors.easymotionmode": "#00ff00",
   "vim.statusBarColors.easymotioninputmode": "#ff0000",
   "vim.statusBarColors.surroundinputmode": "#392855",
+  "files.exclude": {
+    "**/.DS_Store": true
+  },
   "workbench.colorCustomizations": {
     "statusBar.background": "#005f5f",
     "statusBar.noFolderBackground": "#005f5f",
     "statusBar.debuggingBackground": "#005f5f",
     "activityBar.background": "#0d1d31",
     "titleBar.activeBackground": "#1f2435",
-    "titleBar.activeForeground": "#F2FEF4"
+    "titleBar.activeForeground": "#F2FEF4",
+    "titleBar.inactiveForeground": "#ffffffcc",
+    "titleBar.inactiveBackground": "#FF2C70CC"
   },
   "window.closeWhenEmpty": true,
   "window.title": "${rootName}",
-  "workbench.activityBar.visible": true,
   "workbench.preferredLightColorTheme": "Red",
   "search.searchOnType": false,
   "editor.accessibilitySupport": "off",
   "editor.tabSize": 2,
   "tizen.workspace.path": "/Users/carlosvilla/workspace",
   "tizen.chrome.path": "Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODUwLFwiaGVpZ2h0XCI6MTEwMH0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+  "codespaces.accountProvider": "Uninitialized",
+  "workbench.panel.defaultLocation": "right",
+  "workbench.editor.limit.enabled": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "angular.experimental-ivy": true,
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "window.zoomLevel": 2,
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.vueIndentScriptAndStyle": true,
+  "emmet.includeLanguages": {
+    // "javascript": "javascriptreact"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never"
 }
