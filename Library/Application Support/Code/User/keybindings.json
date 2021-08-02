@@ -115,8 +115,8 @@
         "command": "workbench.action.terminal.focusPreviousPane"
     },
     {
-      "key": "alt+cmd+w",
-      "command": "workbench.action.terminal.kill"
+        "key": "alt+cmd+w",
+        "command": "workbench.action.terminal.kill"
     },
     {
         "key": "ctrl+cmd+1",
@@ -442,5 +442,20 @@
     {
         "key": "ctrl+`",
         "command": "workbench.explorer.fileView.toggleVisibility"
-    }
+    },
+    {
+        "key": "y",
+        "command": "filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "c",
+        "command": "filesExplorer.cut",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
 ]

@@ -169,20 +169,25 @@
   "cSpell.userWords": [
     "Buganizer",
     "Devs",
+    "GLTF",
     "Gerrit",
     "Lpaas",
     "OKRs",
     "drei",
+    "gltfs",
+    "gsap",
     "ngrx",
     "nocheck",
     "objectcache",
     "plentycode",
     "promisify",
+    "scroller",
     "susy",
     "tweenmax",
+    "upto",
     "webp"
   ],
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "yaml.customTags": [
     "!g.yaml",
     "!g.doc",
@@ -193,7 +198,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "files.associations": {
     "*.tpl": "jinja-html",
@@ -233,7 +238,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.showTabs": true,
-  "window.nativeTabs": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.experimentalLinkProvider": true,
   "terminal.integrated.experimentalUseTitleEvent": true,
@@ -270,7 +274,6 @@
   "workbench.preferredLightColorTheme": "Red",
   "search.searchOnType": false,
   "editor.accessibilitySupport": "off",
-  "editor.tabSize": 2,
   "tizen.workspace.path": "/Users/carlosvilla/workspace",
   "tizen.chrome.path": "Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
   "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODUwLFwiaGVpZ2h0XCI6MTEwMH0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
@@ -279,16 +282,12 @@
   "workbench.editor.limit.enabled": true,
   "emmet.showSuggestionsAsSnippets": true,
   "angular.experimental-ivy": true,
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
   "editor.minimap.enabled": false,
   "editor.renderControlCharacters": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "window.zoomLevel": 2,
   "prettier.singleQuote": true,
   "prettier.semi": true,
   "prettier.vueIndentScriptAndStyle": true,
@@ -299,5 +298,26 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "javascript.updateImportsOnFileMove.enabled": "never"
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "workbench.preferredHighContrastColorTheme": "Visual Studio Dark",
+  "window.dialogStyle": "custom",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.startupEditor": "none",
+  "window.nativeTabs": true,
+  "window.titleBarStyle": "custom",
+  "editor.cursorStyle": "line",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "editor.tabSize": 2,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": false
+  },
+  "window.zoomLevel": 1,
+  "debug.javascript.autoAttachFilter": "onlyWithFlag"
 }

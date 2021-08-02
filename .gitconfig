@@ -2,9 +2,10 @@
 	cookiefile = /Users/carlosvilla/.gitcookies
 [core]
   editor = /usr/bin/vim
+	ignorecase = false
 [user]
-	name = Carlos
-	email = carlosvilla@google.com
+	name = Carlos Mercado
+	email = carlos.mercado@clevertech.biz
 [credential]
   helper = cache
 [apply]
