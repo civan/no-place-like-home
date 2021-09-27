@@ -88,7 +88,7 @@ autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " NERDTree -git Config
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ "Modified"  : "✹",
   \ "Staged"    : "✚",
   \ "Untracked" : "✭",
@@ -296,23 +296,6 @@ nmap <F8> :TagbarToggle<CR>
 
 
 " macros
-let @l = 'Iconsole.log(A);'
-nmap <leader>l @l
-
-let @s= "a''"
-nmap <leader>' @s
-
-let @d= 'a""'
-nmap <leader>" @d
-
-let @b= 'o@include from(desktop) {}ko'
-nmap <leader>bp @b
-
-let @h= 'i/** * */==ka q�kb'
-nmap <leader>doc @h
-
-let @c = 'I// '
-nmap <leader>c @c
 
 " uncomment
 nmap <leader>uc :s/\/\/ /<CR>

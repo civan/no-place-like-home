@@ -10,155 +10,76 @@
   "vim.foldfix": true,
   "trailing-spaces.highlightCurrentLine": false,
   "editor.renderWhitespace": "selection",
-  "editor.formatOnSave": true,
   "editor.find.cursorMoveOnType": true,
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "y"
-      ],
-      "after": [
-        "\"",
-        "*",
-        "y"
-      ]
+      "before": ["<leader>", "y"],
+      "after": ["\"", "*", "y"]
     },
     {
-      "before": [
-        "<leader>",
-        "p"
-      ],
-      "after": [
-        "\"",
-        "*",
-        "p"
-      ]
-    },
+      "before": ["<leader>", "p"],
+      "after": ["\"", "*", "p"]
+    }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "c"
-      ],
-      "commands": [
-        "editor.action.dirtydiff.next"
-      ]
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.dirtydiff.next"]
     },
     {
-      "before": [
-        "gn"
-      ],
-      "commands": [
-        "editor.action.dirtydiff.next"
-      ],
+      "before": ["gn"],
+      "commands": ["editor.action.dirtydiff.next"],
       "when": "dirtyDiffVisible"
     },
     {
-      "before": [
-        "gN"
-      ],
-      "commands": [
-        "editor.action.dirtydiff.previous"
-      ],
+      "before": ["gN"],
+      "commands": ["editor.action.dirtydiff.previous"],
       "when": "dirtyDiffVisible"
     },
     {
-      "before": [
-        "<leader>",
-        "d"
-      ],
-      "after": [
-        "d",
-        "d"
-      ]
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
     },
     {
-      "before": [
-        "<leader>",
-        "y"
-      ],
-      "after": [
-        "\"",
-        "*",
-        "y"
-      ]
+      "before": ["<leader>", "y"],
+      "after": ["\"", "*", "y"]
     },
     {
-      "before": [
-        "<leader>",
-        "p"
-      ],
-      "after": [
-        "\"",
-        "*",
-        "p"
-      ]
+      "before": ["<leader>", "p"],
+      "after": ["\"", "*", "p"]
     },
     {
-      "before": [
-        "<leader>",
-        "r"
-      ],
+      "before": ["<leader>", "r"],
       "commands": [
         "workbench.view.explorer",
         "workbench.files.action.showActiveFileInExplorer"
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "o"
-      ],
-      "commands": [
-        "workbench.action.quickOpen"
-      ]
+      "before": ["<leader>", "o"],
+      "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": [
-        "<C-l>"
-      ],
-      "commands": [
-        "workbench.action.focusNextGroup"
-      ]
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.focusNextGroup"]
     },
     {
-      "before": [
-        "<C-h>"
-      ],
-      "commands": [
-        "workbench.action.focusPreviousGroup"
-      ]
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.focusPreviousGroup"]
     },
     {
-      "before": [
-        "g",
-        "r"
-      ],
-      "commands": [
-        "editor.action.rename"
-      ]
+      "before": ["g", "r"],
+      "commands": ["editor.action.rename"]
     },
     {
-      "before": [
-        "g",
-        "o"
-      ],
-      "commands": [
-        "editor.action.openLink"
-      ]
+      "before": ["g", "o"],
+      "commands": ["editor.action.openLink"]
     }
   ],
   "vim.leader": "<space>",
@@ -188,11 +109,7 @@
     "webp"
   ],
   "workbench.iconTheme": "material-icon-theme",
-  "yaml.customTags": [
-    "!g.yaml",
-    "!g.doc",
-    "!g.url"
-  ],
+  "yaml.customTags": ["!g.yaml", "!g.doc", "!g.url"],
   "editor.lineNumbers": "relative",
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -218,9 +135,7 @@
     }
   ],
   "[jinja-html]": {},
-  "cSpell.enableFiletypes": [
-    "ssh_config"
-  ],
+  "cSpell.enableFiletypes": ["ssh_config"],
   "markdown.previewFeatures": true,
   "markdown.preview.breaks": false,
   "markdown.styles": [
@@ -232,7 +147,7 @@
     "MD004": false
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -243,9 +158,7 @@
   "terminal.integrated.experimentalUseTitleEvent": true,
   "editor.suggest.statusBar.visible": true,
   "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": [
-    "#005f5f"
-  ],
+  "vim.statusBarColors.normal": ["#005f5f"],
   "vim.statusBarColors.insert": "#490000",
   "vim.statusBarColors.visual": "#003364",
   "vim.statusBarColors.visualline": "#003364",
@@ -260,9 +173,9 @@
     "**/.DS_Store": true
   },
   "workbench.colorCustomizations": {
-    "statusBar.background": "#005f5f",
-    "statusBar.noFolderBackground": "#005f5f",
-    "statusBar.debuggingBackground": "#005f5f",
+    "statusBar.background": "#003364",
+    "statusBar.noFolderBackground": "#003364",
+    "statusBar.debuggingBackground": "#003364",
     "activityBar.background": "#0d1d31",
     "titleBar.activeBackground": "#1f2435",
     "titleBar.activeForeground": "#F2FEF4",
@@ -318,6 +231,15 @@
     "plaintext": true,
     "markdown": false
   },
-  "window.zoomLevel": 1,
-  "debug.javascript.autoAttachFilter": "onlyWithFlag"
+  "debug.javascript.autoAttachFilter": "onlyWithFlag",
+  "terminal.external.windowsExec": "C:\\WINDOWS\\System32\\wsl.exe",
+  "liveServer.settings.donotVerifyTags": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.suggest.preview": true,
+  "javascript.suggestionActions.enabled": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "window.zoomLevel": 1
 }

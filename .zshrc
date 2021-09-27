@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+ZSH_DISABLE_COMPFIX=true
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -120,9 +122,6 @@ export PATH=$PATH:/usr/local/Cellar/yarn/0.27.5_1/bin/
 
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-ZSH_DISABLE_COMPFIX=true
-
 
 
 export PATH=~/drivers/:$PATH
