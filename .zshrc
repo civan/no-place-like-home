@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(git vi-mode colored-man-pages gh nvm zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,4 +110,12 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # vim using caps lock combination
-xmodmap ~/.vim_keyboard
+# xmodmap ~/.vim_keyboard
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/altair/google-cloud-sdk/path.zsh.inc' ]; then . '/home/altair/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/altair/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/altair/google-cloud-sdk/completion.zsh.inc'; fi
+
+PATH="/home/linuxbrew/.linuxbrew/bin:$PATH";
